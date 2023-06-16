@@ -1,4 +1,13 @@
-num = int(input("enter a number: "))
-name = input("enter your name: ")
-for i in range(num):
-    print(name)
+from flask import Flask, render_template
+import os
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def home():
+    return "YO"
+
+
+if __name__ == "__main__":
+    app.run(debug=True,host="0.0.0.0")
